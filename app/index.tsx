@@ -1,5 +1,5 @@
-import { Link } from "expo-router";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { RouteButton } from "@/components/route-button";
+import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -17,16 +17,8 @@ export default function Index() {
         </View>
       </View>
       <View style={styles.buttonsContainer}>
-        <Link href="/sign-up" asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Sign up</Text>
-          </Pressable>
-        </Link>
-        <Link href="/log-in" asChild>
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Log in</Text>
-          </Pressable>
-        </Link>
+        <RouteButton href="/sign-up" text="Sign up" />
+        <RouteButton href="/log-in" text="Log in" />
       </View>
     </SafeAreaView>
   );
